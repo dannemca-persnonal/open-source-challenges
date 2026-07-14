@@ -1,0 +1,38 @@
+{
+  "name": "⚖️ Lex Imperfecta | 🔴 Expert (Quis Custodiet)",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/adventures/lex-imperfecta/expert",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/lex-imperfecta_expert/post-create.sh",
+  "postStartCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/lex-imperfecta_expert/post-start.sh",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "falco-rules.yaml",
+        "manifests/policies/no-privileged-containers.yaml"
+      ],
+      "permissions": {
+        "codespaces": "write"
+      }
+    }
+  },
+  "remoteEnv": {
+    "OFFON_EXTERNAL_SOURCE": "dynatrace-community"
+  },
+  "forwardPorts": [30110, 30111],
+  "portsAttributes": {
+    "30110": {
+      "label": "Policy Reporter",
+      "onAutoForward": "notify"
+    },
+    "30111": {
+      "label": "Falcosidekick UI",
+      "onAutoForward": "notify"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "ignore"
+  }
+}

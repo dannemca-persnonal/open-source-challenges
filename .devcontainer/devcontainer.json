@@ -1,0 +1,19 @@
+{
+  "name": "Open Source Challenges",
+  "image": "mcr.microsoft.com/devcontainers/base:bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint"
+      ]
+    }
+  }
+}
+
