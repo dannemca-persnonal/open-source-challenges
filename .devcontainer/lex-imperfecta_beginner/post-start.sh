@@ -2,7 +2,7 @@
 set -e
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-CHALLENGE_DIR="$REPO_ROOT/adventures/05-lex-imperfecta/beginner"
+CHALLENGE_DIR="$REPO_ROOT/adventures/lex-imperfecta/beginner"
 
 echo "✨ Starting Lex Imperfecta - Beginner Level"
 
