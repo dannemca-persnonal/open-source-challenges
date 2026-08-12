@@ -115,7 +115,7 @@ spec:
       name: File in the archives
       action: publish:gitea
       input:
-        repoUrl: ${{ parameters.repoUrl }} # missing property to pass in publisher
+        repoUrl: ${{ parameters.repoUrl }} # missing property to pass in publisher 
         description: ${{ parameters.description }}
         defaultBranch: main
 
